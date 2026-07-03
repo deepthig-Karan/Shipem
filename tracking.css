@@ -1,0 +1,190 @@
+/* tracking.css - styles for the tracking output matching the provided layout */
+body {
+    font-family: roboto;
+}
+/* General wrapper */
+.tracking-wrapper {
+  max-width: 980px;
+  margin: 10px auto 0 auto ;
+  padding: 12px;
+  color: #1b2540;
+}
+
+/* Form controls */
+.tracking-form label {
+  display:block;
+  font-weight:600;
+  margin-bottom:8px;
+  color:#333;
+  font-size: 14px;
+    font-weight: 600;
+    color: rgb(42, 59, 142);
+}
+.track-controls {
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+#trackInput {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px; height: 32px;
+  border: 1px solid rgb(178, 178, 178);
+}
+
+.tracking-form {
+  display: flex;
+  flex-direction: column;
+  background-color: none;
+  align-items: center;
+}
+
+.btn {
+  cursor:pointer;
+  font-weight:400;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background:linear-gradient(90deg, #283B91, #5A7931);
+  color: rgb(239, 239, 239);
+  border:0 solid rgb(178, 178, 178);
+
+}
+.btn-primary {color:#fff; text-align: center; }
+
+/* Tracking result container */
+.track-result { margin-top:40px; }
+
+/* Header: consignment + origin/destination bars + logo */
+
+.track-left {
+   display:flex;
+  flex-direction: row;
+  gap:18px;
+  margin-bottom:12px;
+  align-items:center;
+}
+
+.track-right {
+  background-color: none;
+  flex: 0 1 180px;
+  width: auto;
+  margin-right: auto; margin-left: 30px;
+}
+
+.track-logo {
+
+  display: inline;
+}
+
+/* Consignment block */
+.consign-row {
+  width: auto; background-color:none;
+  text-align: center;
+  margin-right: auto; margin-left: auto;
+  gap:18px;
+
+}
+.consign-label { color:#333; font-weight:600; min-width:120px; }
+.consign-no {
+  font-size:24px;
+  font-weight:800;
+  color:#111;
+  margin-top:6px;
+}
+
+/* origin/destination bars (centered) */
+.location-bars {
+  margin: 6px auto 6px auto;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items: center; 
+}
+.bar {
+  display:inline-block;
+  padding:8px 18px;
+  color:#fff;
+  font-weight:700;
+  border-radius:4px;
+  min-width:360px;
+  text-align:center;
+}
+.bar.origin { background:#233f93; }  /* blue */
+.bar.destination { background:#3b7a2e; } /* green */
+
+/* Table header (fixed three columns) */
+.track-table {
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:10px;
+}
+.track-table thead th {
+  text-align: center;
+  border:1px solid #ffffff;
+  background:#555959;
+  color:#fff;
+  padding:10px 12px;
+  font-weight:700;
+  font-size:14px;
+}
+
+.track-table colgroup col:nth-child(1) { width:24%; }
+.track-table colgroup col:nth-child(2) { width:24%; }
+.track-table colgroup col:nth-child(3) { width:52%; }
+
+/* Group box styling */
+.group-box {
+  border:2px solid #2b4aa0; /* blue-ish border */
+  border-radius:4px;
+  padding:8px 0px 0px 0px;
+  margin:12px 0;
+  background:#fff;
+}
+
+/* Status title (appears at top-left within the group) */
+.group-status-title {
+  color:#233f93;
+  font-weight:700;
+  margin: 2px 0px 4px 8px;
+  font-size:15px;
+  text-align: left;
+}
+
+/* Items grid: ensure columns align with header */
+.group-items {
+  display:table;
+  table-layout:fixed;
+  width:100%;
+  border-collapse:collapse;
+}
+.group-items .row {
+  display:table-row;
+}
+.cell {
+  display:table-cell;
+  vertical-align:top;
+  padding:10px 12px;
+  border-bottom: none;
+}
+.cell.date { width:24%; color:#6b7280; font-style:italic; font-size:13px; text-align: left; }
+.cell.place { width:24%; font-weight:600; color:#111; text-align: center;font-size:14px;}
+.cell.details { width:52%; color:#333; text-align: center; font-size:14px;}
+
+/* Spacing between item rows */
+.group-items .row + .row .cell { padding-top:18px; }
+
+/* Small separators between groups */
+.group-box + .group-box { margin-top:18px; }
+
+/* Messages & loading */
+.track-loading { font-style:italic; color:#6b7280; padding:10px; }
+.track-message.error { color:#b22727; font-weight:700; padding:10px; }
+
+/* Responsive tweaks */
+@media (max-width:820px) {
+  .bar { min-width:260px; }
+  .track-right { display:none; } /* hide logo on very small screens to keep alignment */
+  .consign-label { min-width:90px; }
+}
