@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShipEm — Anything to Anywhere</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="sample1.css">
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="Logo/mainlogo.svg" alt="ShipEm logo" class="logo-img">
+      </a>
+      <nav class="main-nav">
+       <a class="abt" href="#" style="color: #5A7931;">Home</a>
+        <a class="abt" href="about.html">About</a>
+        <a class="enq" href="https://wa.me/918148655877" target="_blank" rel="noopener noreferrer">Enquiry</a>
+        <a class="srv" href="services.html">Services</a>
+        <a class="abt" href="track.html">Track</a>
+        <a class="con" href="contact.html">Contact</a>
+      </nav>
+
+      
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="big-logo">
+            <img src="Logo/el_logo.svg" alt="ShipEm large logo" class="big-logo-img">
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <h1 style="background: -webkit-linear-gradient(0deg, #283B91, #5A7931); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Anything to Anywhere</h1>
+             <h2 style="font-size: 16px; margin: 0; color: #3b7a2e;">International & Domstic Courier Services</h2>
+         <div class="ln-brk"></div>
+             <p class="lead">
+            Sending a gift to family or a sale to a buyer? ShipEm Express makes courier services simple, affordable, and incredibly fast. Just book it and we’ll handle the rest.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="contact.html" id="openBooking" class="btn-primary" type="button">Book at branch</a>
+            <a class="btn-ghost" href="https://wa.me/918148655877" target="_blank" rel="noopener noreferrer">Get quote now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature">
+            <h3>Why us?</h3>
+            <ul>
+              <li>Perfect packing & sealing</li>
+              <li>Fast & reliable service</li>
+              <li>Free home pickup</li>
+              <li>Lowest cost</li>
+            </ul>
+          </div>
+
+          <div class="feature">
+            <h3>Tips</h3>
+            <ul>
+              <li>Avoid Non-veg food items</li>
+              <li>Make sure to mention if the food items are home made or branded</li>
+            </ul>
+          </div>
+
+          <div class="feature">
+            <h3>Track your package</h3>
+            <div class="track-box">
+              
+              <a href="track-result.html"><button id="trackBtn" class="btn btn-track" src>Click here to Track your package</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="tracking.js" defer></script>
+    <section class="reviews">
+      <div class="container">
+        <h3 class="section-title">Customer reviews</h3>
+        <div class="review-shell">
+          <button class="review-arrow left" onclick="prevReview()">‹</button>
+          <div class="review-card" id="reviewCard">
+            <div class="review-route">IND to UK</div>
+              <strong>Radha, Madurai</strong>
+              <blockquote>
+              <p>Parcel received nicely without any damage! Thank you so much.    </p>
+            </blockquote>
+          </div>
+          <button class="review-arrow right" onclick="nextReview()">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-intro">
+      <div class="container">
+        <h3 class="section-title">Services</h3>
+        <p class="services-desc">At ShipEm, we provide reliable, efficient, and tailored logistics solutions designed to meet every need.</p>
+      </div>
+      <div class="srv-typ">
+        <a class="srv-int" href="services.html#in-co" target="_blank"><img class="s-icon" src="Images/airplane.png" alt="" style="width: 40px; padding: 0px;"><p style="margin-bottom: 0; margin-top: 0;">International Courier</p><p style="font-weight: 400; font-size: 10pt; margin: 0;">Send your packages to more than 200 countries</p></a>
+        <a class="srv-med" href="services.html#:~:text=and%20import%20needs.-,Medicine%20Courier" target="_blank"> <img class="s-icon" src="Images/med.png" alt="" style="width: 40px; padding: 0px;"><p style="margin-bottom: 0; margin-top: 0;">Medicine courier</p><p style="font-weight: 400; font-size: 10pt;  margin: 0;">Send Medicine Shipment Internationally</p></a>
+        <a class="srv-b2b" href="services.html#:~:text=our%20highest%20priorities.-,B2B,-Solutions" target="_blank"><img class="s-icon" src="Images/b2b.png" alt="" style="width: 40px; padding: 0px;"><p style="margin-bottom: 0; margin-top: 0;">B2B</p><p style="font-weight: 400; font-size: 10pt;  margin: 0;">International commercial & business shipments</p></a>
+        <a class="srv-dom" href="services.html#:~:text=predictable%20supply%20chain.-,Domestic,-Courier" target="_blank"><img class="s-icon" src="Images/domes.png" alt="" style="width: 40px; padding: 0px;"><p style="margin-bottom: 0; margin-top: 0;">Domestic Courier</p><p style="font-weight: 400; font-size: 10pt; margin: 0;">Send your packages across the country</p></a>
+      </div>
+      
+    </section>
+
+    <section class="final-cta">
+      <div class="container cta-inner">
+        <h3>Ready to Start Shipping with Confidence?</h3>
+        <p>Choosing the right logistics partner is critical to your success. At ShipEm, we combine technology and service to deliver value.</p>
+        <a class="btn btn-primary cta-btn" href="https://wa.me/918148655877" target="_blank" rel="noopener noreferrer">Get Your Free Quote Now</a>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Booking modal (used by booking-embed.js) -->
+  <div id="bookingModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="bookingTitle">
+    <div class="modal-overlay" data-dismiss="modal"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" id="closeBooking" aria-label="Close booking dialog">✕</button>
+
+      <div id="modalContent">
+        <h2 id="bookingTitle">Booking</h2>
+        <p>Select "Book now" to open the booking form.</p>
+      </div>
+    </div>
+  </div>
+
+   <footer>
+        <div class="cont_t" style="display: flex; flex-direction: row; align-items: center;">Connect us on
+            <div class="instagram">
+                <a href="https://www.instagram.com/shipem.el/" target="_blank"><img src="Icons/insta.svg" alt="Instagram icon"></a>
+            </div>
+            <div class="facebook">
+                <a href="https://www.facebook.com/shipem.el" target="_blank"><img src="Icons/fb.svg" alt="Facebook icon"></a>
+            </div>
+            </div>
+        <div><p class="legal-text">©Copyright 2026 | ShipEm Enterprises</p></div>
+    </footer>
+
+  <script>
+    // simple review slider data & functions
+    const reviews = [
+      {route: 'IND to UK', person: 'Radha, Madurai', text: 'Parcel received nicely without any damage! Thank you so much.'},
+      {route: 'IND to USA', person: 'Balamurugan, Karaikudi', text: 'Great service and fast delivery.'},
+      {route: 'IND to AUS', person: 'Thabirna, Paramakudi', text: 'Package arrived in perfect condition.'}
+    ];
+    let idx = 0;
+    const reviewCard = document.getElementById('reviewCard');
+
+    function renderReview(i) {
+      const r = reviews[i];
+      reviewCard.innerHTML = '<div class="review-route">'+r.route+'</div>' +
+        '<blockquote>“<strong>'+r.person+'</strong><p>'+r.text+'</p>”</blockquote>';
+    }
+    function nextReview(){ idx=(idx+1)%reviews.length; renderReview(idx); }
+    function prevReview(){ idx=(idx-1+reviews.length)%reviews.length; renderReview(idx); }
+
+    renderReview(idx);
+  </script>
+
+  <!-- external script to embed Google Form in modal -->
+  <script src="booking-embed.js" defer></script>
+</body>
+</html>
