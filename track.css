@@ -92,3 +92,23 @@ p {
 .whasapp {
    margin-bottom: 20px;
 }
+
+.track-logo-el {
+    width: min(100%, 400px);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media (max-width: 560px) {
+    .track-logo-el {
+        padding-top: 32px !important;
+    }
+
+    .msg {
+        margin-top: 60px;
+    }
+
+    .whatsapp-btn {
+        margin-top: 24px;
+    }
+}
