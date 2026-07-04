@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; border-radius: 14px;
+  padding: 0;
 }
 
 body {
@@ -42,6 +42,8 @@ body {
 .two-col {
   display: grid; grid-template-columns: 1.1fr 0.9fr;
   gap: 60px; align-items: center;  background-color: #f3f5f1;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .two-col.reverse {
@@ -91,9 +93,15 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
+  .section {
+    padding: 46px 0;
+  }
+
   .two-col,
   .two-col.reverse {
     grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 24px;
   }
 
   .oval-grid {
@@ -102,5 +110,40 @@ body {
 
   .oval-item {
     border-radius: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .section p {
+    font-size: 13px;
+  }
+
+  .two-col,
+  .two-col.reverse {
+    padding: 18px;
+  }
+
+  .image-block img {
+    height: 200px;
+  }
+
+  .center-title {
+    margin-bottom: 28px;
+  }
+
+  .oval-grid {
+    gap: 18px;
+  }
+
+  .oval-item {
+    padding: 14px 18px;
   }
 }
