@@ -235,7 +235,7 @@ document.getElementById("copy-btn").addEventListener("click", function() {
     });
 
     text += `\n━━━━━━━━━━━━━━━━━━━━\n`;
-    text += `*Book your shipment with ShipEm Enterprises!*`;
+    text += `*Book your shipment with ShipEm!*`;
 
     // Copy to clipboard
     navigator.clipboard.writeText(text).then(() => {
