@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShipEm Price Calculator</title>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-calc.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="main_logo"><img src="Logo/el_logo.svg" alt="ShipEm logo" class="logo-img"></div>
+        <h2>International shipment Price Calculator</h2>
+         <form id="price-form">
+            <div class="form-group">
+                <label for="country">Country Name:</label>
+                <select id="country" required>
+                    <option value="">Loading countries...</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="weight">Package Weight (kg):</label>
+                <input type="number" id="weight" step="0.1" min="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="package-type">Type of Package:</label>
+                <select id="package-type" required>
+                    <option value="Non-Doc">Non-Doc</option>
+                    <option value="Doc">Doc</option>
+                    <option value="Medicine">Medicine</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="calculate-btn">Calculate Price</button>
+                <button type="button" id="reset-btn">Reset</button>
+            </div>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <h3>Calculation Result</h3>
+            <p><strong>Country:</strong> <span id="res-country"></span></p>
+            <p><strong>Weight:</strong> <span id="res-weight"></span> kg</p>
+            <p><strong>Package Type:</strong> <span id="res-type"></span></p>
+
+            <!-- Contextual Information Link Button -->
+            <div id="extra-info-container"></div>
+            
+            <div id="modes-result"></div>
+
+            <!-- Copy Details Button Section -->
+            <div class="copy-section">
+                <button type="button" id="copy-btn" class="copy-btn">📋 Copy Details</button>
+                <span id="copy-feedback" class="copy-feedback hidden">✅ Copied to clipboard!</span>
+            </div>
+
+            <div class="support-section">
+                <p>Have questions or need a custom quote?</p>
+                <!-- Replace YOUR_PHONE_NUMBER with your WhatsApp number (e.g. 919876543210) -->
+                <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-btn">
+                    💬 Contact Support on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal Overlay -->
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script-calc.js"></script>
+</body>
+</html>
+</html>
