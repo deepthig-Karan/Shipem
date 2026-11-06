@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShipEm Price Calculator</title>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style-calc.css">
-    <link rel="icon" type="image/x-icon" href="/Logo/mainlogo.svg">
 </head>
 <body>
     <div class="calculator-container">
-        <div class="main_logo"><img src="Logo/el_logo.svg" alt="ShipEm logo" class="logo-img"></div>
-        <h2>International shipment Price Calculator</h2>
-         <form id="price-form">
+        <div class="main_logo">
+            <img src="Logo/el_logo.svg" alt="ShipEm logo" class="logo-img">
+        </div>
+        <h2>International Shipment Price Calculator</h2>
+        
+        <form id="price-form">
             <div class="form-group">
                 <label for="country">Country Name:</label>
                 <select id="country" required>
@@ -22,7 +24,7 @@
             
             <div class="form-group">
                 <label for="weight">Package Weight (kg):</label>
-                <input type="number" id="weight" step="0.1" min="0.1" required>
+                <input type="number" id="weight" step="0.1" min="0.1" placeholder="e.g. 2.5" required>
             </div>
 
             <div class="form-group">
@@ -46,28 +48,29 @@
             <p><strong>Weight:</strong> <span id="res-weight"></span> kg</p>
             <p><strong>Package Type:</strong> <span id="res-type"></span></p>
 
-            <!-- Contextual Information Link Button -->
+            <!-- Contextual Popup Button -->
             <div id="extra-info-container"></div>
             
+            <!-- Dynamic Shipping Modes & Prices -->
             <div id="modes-result"></div>
 
-            <!-- Copy Details Button Section -->
+            <!-- Copy Details Section -->
             <div class="copy-section">
                 <button type="button" id="copy-btn" class="copy-btn">📋 Copy Details</button>
                 <span id="copy-feedback" class="copy-feedback hidden">✅ Copied to clipboard!</span>
             </div>
 
+            <!-- WhatsApp Support Link -->
             <div class="support-section">
                 <p>Have questions or need a custom quote?</p>
-                <!-- Replace YOUR_PHONE_NUMBER with your WhatsApp number (e.g. 919876543210) -->
-                <a href="https://wa.me/918148655877" target="_blank" class="whatsapp-btn">
+                <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-btn">
                     💬 Contact Support on WhatsApp
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Popup Modal Overlay -->
+    <!-- Modal Overlay for Learn More / Medicine Notes -->
     <div id="info-modal" class="modal hidden">
         <div class="modal-content">
             <button class="modal-close" id="modal-close-btn">&times;</button>
@@ -77,5 +80,4 @@
 
     <script src="script-calc.js"></script>
 </body>
-</html>
 </html>
